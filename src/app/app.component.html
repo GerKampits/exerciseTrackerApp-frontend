@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+<div class="d-flex flex-column min-vh-100">
+  <div class="flex-grow-1">
+
+<div class="container mt-4">
+  <div class="row">
+    <nav
+      class="p-2 navbar navbar-expand navbar-light bg-success justify-content-between"
+    >
+      <span class="navbar-brand">
+        <strong
+          ><a href="#" routerLink="" class="text-decoration-none text-light">{{
+            title
+          }}</a></strong
+        >
+      </span>
+
+      <!-- <!-- <span *ngIf="!(isLoggedIn$ | async); else fullname"> Coding Factory</span>
+      <ng-template #fullname>
+        <span> {{ loggedInUserFullname$ | async }}</span>
+        <button class="ms-2 btn btn-danger btn-sm" (click)="logout()">
+          Logout
+        </button> -->
+      <!-- </ng-template> -->
+
+       <ul class="navbar-nav">
+        <app-dropdown
+          [dropdownLabel]="'Users'"
+          [items]="usersMenu"
+        ></app-dropdown>
+        <app-dropdown
+          [dropdownLabel]="'Exercises'"
+          [items]="exercisesMenu"
+        ></app-dropdown>
+        <app-dropdown
+          [dropdownLabel]="'About'"
+          [items] = "aboutMenu"
+        ></app-dropdown>
+      </ul>
+    </nav>
+      <!-- <ng-template #loggedOut>
+        <a class="btn btn-primary btn-sm" routerLink="/login">Login</a>
+      </ng-template>
+    </nav>
+  </div>
+  <div class="row mt-2"> -->
+    <!-- <lib-alert
+      *ngIf="isLoading$ | async"
+      [type]="'info'"
+      [text]="'Communicating with backend ...'"
+      [spinner]="true"
+    ></lib-alert> -->
+
+    <!-- <lib-alert
+      *ngFor="let alert of alerts; index as i"
+      [type]="alert.type ?? 'info'"
+      [heading]="alert.heading"
+      [text]="alert.text"
+      (dismiss)="onAlertDismiss(i)"
+    ></lib-alert> -->
+
+
+    <router-outlet></router-outlet>
+
+   </div> 
+  
+  <div class="row mt-4">
+    <footer class="footer  py-3">
+      <div class="container-lg">
+
+        <div class="row">
+  
+          <div class="col-sm-12 text-center text-white"> 
+              <p>Copyright &copy; exerciseTracker. All rights reserved, 2023</p>
+          </div>
+  
+          <div class="col-sm-12 text-center text-white fs-5"> 
+            <p>ExerciseTracker: Track. Transform. Thrive.</p>
+          </div>
+  
+          <div class="col-sm-12 text-center text-white social">                                
+                  <a href="https://web.facebook.com/?_rdc=1&_rdr"><i class="fab fa-facebook-square"></i></a>
+                  <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a>
+          </div> 
+  
+        </div>
+  
+      </div>
+    </footer>
+  </div>
+  
+  
+</div>
+
+</div>
+</div>

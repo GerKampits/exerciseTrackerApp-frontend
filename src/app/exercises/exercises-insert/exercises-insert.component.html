@@ -1,0 +1,37 @@
+<form>
+  <h2>Exercise Form</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="id" class="form-label">Id</label>
+      <input type="text" class="form-control" id="id" formControlName="id"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exercise" class="form-label">Exercise</label>
+      <input type="password" class="form-control" id="exercise" formControlName="exercise"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" class="form-control" id="description" formControlName="description" />
+    </div>
+    <div class="mb-3">
+      <label for="duration" class="form-label">Duration</label>
+      <input type="text" class="form-control" id="duration" formControlName="duration"/>
+    </div>
+    <div class="mb-3">
+      <label for="distance" class="form-label">Distance</label>
+      <input type="text" class="form-control" id="distance" formControlName="distance"/>
+    </div>
+    <div class="mb-3">
+      <label for="calories" class="form-label">Calories</label>
+      <input type="text" class="form-control" id="calories" formControlName="calories"/>
+    </div>
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input type="text" class="form-control" id="date" formControlName="date"/>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="!form.valid">
+      Submit
+  </button>
+</form>
